@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
@@ -31,6 +31,15 @@ const PrimaryNav = () => {
       }
     }
   };
+
+  useEffect(() => {
+    if (activeIndex !== null) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [activeIndex]);
+
   return (
     <div className="bg-white flex items-center gap-10 px-10 py-3 sticky top-0 text-black shadow-md z-20">
       <div className="cursor-pointer">
@@ -51,7 +60,7 @@ const PrimaryNav = () => {
                 className="hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2 relative capitalize z-20"
                 onClick={() => handleToggle(index)}
               >
-                <a href="#">{name}</a>
+                {name}
                 <CategoryBox showBox={activeIndex === index} dropdown={drops} />
               </li>
             );
@@ -70,7 +79,7 @@ const PrimaryNav = () => {
         </form>
 
         {/* Sign-in and cart */}
-        <div>
+        <div className="flex gap-10">
           <button className="font-light hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2">
             <i className="fa-solid fa-user mr-3"></i>Sign in
           </button>
