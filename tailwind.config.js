@@ -7,6 +7,7 @@ export default {
         red: "#cc0000",
         dark_red: "#aa0000",
         black: "#333333",
+        grey: "#adadad",
         dark_white: "#f7f7f7",
         white: "#ffffff",
         cream: "#f2d8bd",
