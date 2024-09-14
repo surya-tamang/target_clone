@@ -1,10 +1,14 @@
 import React from "react";
-import Header from "./components/Header";
+import Hero from "./components/Hero";
+import PrimaryNav from "./components/PrimaryNav";
+import SecondaryNav from "./components/SecondaryNav";
 
 const App = () => {
   return (
     <>
-      <Header />
+      <SecondaryNav />
+      <PrimaryNav />
+      <Hero />
     </>
   );
 };

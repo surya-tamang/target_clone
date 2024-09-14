@@ -4,7 +4,7 @@
 
 .categBox {
     animation: slideDown 0.2s ease-in;
-    top: 100%;
+    top: 3.5rem;
 }
 
 @keyframes slideDown {
@@ -13,6 +13,10 @@
     }
 
     100% {
-        top: 100%;
+        top: 3.5rem;
     }
+}
+
+.blackscreen {
+    background-color: #7876764f;
 }

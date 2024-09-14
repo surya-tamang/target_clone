@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
+import BlackScreen from "./BlackScreen";
 
 const PrimaryNav = () => {
   const primaryNav = [
@@ -31,10 +32,10 @@ const PrimaryNav = () => {
     }
   };
   return (
-    <>
+    <div className="bg-white flex items-center gap-10 px-10 py-3 sticky top-0 text-black shadow-md z-20">
       <div className="cursor-pointer">
         <a href="#" aria-label="Home">
-          logo
+          <img src="target.png" alt="" className="w-11 h-10" />
         </a>
       </div>
       <nav
@@ -78,7 +79,8 @@ const PrimaryNav = () => {
           </button>
         </div>
       </nav>
-    </>
+      <BlackScreen showBox={activeIndex !== null} />
+    </div>
   );
 };
 
