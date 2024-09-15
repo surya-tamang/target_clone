@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
+import MobMenu from "./MobMenu";
 
 const PrimaryNav = () => {
   const primaryNav = [
@@ -42,6 +43,7 @@ const PrimaryNav = () => {
 
   return (
     <div className="bg-white flex items-center gap-8 px-10 sticky top-0 text-black shadow-md z-30">
+      {/* <MobMenu /> */}
       <div>
         <i className="fa-solid fa-bars text-black md:hidden"></i>
         <i className="fa-solid fa-x text-black md:hidden"></i>
@@ -55,7 +57,7 @@ const PrimaryNav = () => {
         className="flex justify-around gap-3 w-full items-center"
         aria-label="primary navigation"
       >
-        <ul className="flex font-medium">
+        <ul className="md:flex hidden font-medium">
           {primaryNav.map((item, index) => {
             const { name } = item;
             return (
@@ -90,7 +92,8 @@ const PrimaryNav = () => {
         {/* Sign-in and cart */}
         <div className="flex gap-10">
           <button className="font-light hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2">
-            <i className="fa-solid fa-user mr-3"></i>Sign in
+            <i className="fa-solid fa-user mr-3"></i>
+            <span className="md:block hidden">Sign in</span>
           </button>
           <button className="hover:bg-dark_white rounded-full px-3 cursor-pointer py-2">
             <i className="fa-solid fa-cart-shopping"></i>
