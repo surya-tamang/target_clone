@@ -41,7 +41,11 @@ const PrimaryNav = () => {
   }, [activeIndex]);
 
   return (
-    <div className="bg-white flex items-center gap-10 px-10 py-5 sticky top-0 text-black shadow-md z-30">
+    <div className="bg-white flex items-center gap-8 px-10 sticky top-0 text-black shadow-md z-30">
+      <div>
+        <i className="fa-solid fa-bars text-black md:hidden"></i>
+        <i className="fa-solid fa-x text-black md:hidden"></i>
+      </div>
       <div className="cursor-pointer">
         <a href="#" aria-label="Home">
           <img src="target.png" alt="" className="w-11 h-10" />
@@ -51,16 +55,18 @@ const PrimaryNav = () => {
         className="flex justify-around gap-3 w-full items-center"
         aria-label="primary navigation"
       >
-        <ul className="flex gap-4 font-medium">
+        <ul className="flex font-medium">
           {primaryNav.map((item, index) => {
             const { name } = item;
             return (
               <li
                 key={index}
-                className="hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2 relative capitalize z-20 font-bold"
+                className="py-6 px-3 relative capitalize z-30"
                 onClick={() => handleToggle(index)}
               >
-                {name}
+                <span className="cursor-pointer hover:bg-dark_white rounded-3xl px-3 py-2 font-bold">
+                  {name}
+                </span>
                 <CategoryBox showBox={activeIndex === index} dropdown={drops} />
               </li>
             );
@@ -68,14 +74,17 @@ const PrimaryNav = () => {
         </ul>
 
         {/* Search bar */}
-        <form className="w-96">
+        <form className="w-96 p-3 rounded-3xl bg-dark_white flex items-center">
           <input
             type="search"
             name="search"
-            className="w-full py-2 px-3 rounded-3xl bg-dark_white outline-none"
+            className="w-11/12 outline-none bg-dark_white"
             placeholder="What can we help you find?"
             aria-label="Search"
           />
+          <button className="pl-2">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
         </form>
 
         {/* Sign-in and cart */}

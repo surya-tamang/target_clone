@@ -8,8 +8,9 @@ body.no-scroll {
 
 .categBox {
     animation: slideDown 0.2s ease-in;
-    top: 3.5rem;
+    top: 4.5rem;
 }
+
 
 @keyframes slideDown {
     0% {
@@ -17,10 +18,11 @@ body.no-scroll {
     }
 
     100% {
-        top: 3.5rem;
+        top: 4.5rem;
     }
 }
 
 .blackscreen {
     background-color: #7876764f;
+    top: 4.5rem;
 }
