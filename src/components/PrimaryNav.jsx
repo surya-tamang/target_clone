@@ -41,7 +41,7 @@ const PrimaryNav = () => {
   }, [activeIndex]);
 
   return (
-    <div className="bg-white flex items-center gap-10 px-10 py-3 sticky top-0 text-black shadow-md z-20">
+    <div className="bg-white flex items-center gap-10 px-10 py-5 sticky top-0 text-black shadow-md z-30">
       <div className="cursor-pointer">
         <a href="#" aria-label="Home">
           <img src="target.png" alt="" className="w-11 h-10" />
@@ -57,7 +57,7 @@ const PrimaryNav = () => {
             return (
               <li
                 key={index}
-                className="hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2 relative capitalize z-20"
+                className="hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2 relative capitalize z-20 font-bold"
                 onClick={() => handleToggle(index)}
               >
                 {name}
