@@ -63,12 +63,14 @@ const PrimaryNav = () => {
             return (
               <li
                 key={index}
-                className="py-6 px-3 relative capitalize z-30"
+                className="bg-red relative capitalize z-30"
                 onClick={() => handleToggle(index)}
               >
-                <span className="cursor-pointer hover:bg-dark_white rounded-3xl px-3 py-2 font-bold">
-                  {name}
-                </span>
+                <div className="relative z-30 bg-white py-6 px-3">
+                  <span className="cursor-pointer hover:bg-dark_white rounded-3xl px-3 py-2 font-bold ">
+                    {name}
+                  </span>
+                </div>
                 <CategoryBox showBox={activeIndex === index} dropdown={drops} />
               </li>
             );
@@ -76,18 +78,20 @@ const PrimaryNav = () => {
         </ul>
 
         {/* Search bar */}
-        <form className="w-96 p-3 rounded-3xl bg-dark_white flex items-center">
-          <input
-            type="search"
-            name="search"
-            className="w-11/12 outline-none bg-dark_white"
-            placeholder="What can we help you find?"
-            aria-label="Search"
-          />
-          <button className="pl-2">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
+        <div className="bg-white py-3 px-3 z-50">
+          <form className="w-96 p-3 rounded-3xl bg-dark_white flex items-center">
+            <input
+              type="search"
+              name="search"
+              className="w-11/12 outline-none bg-dark_white"
+              placeholder="What can we help you find?"
+              aria-label="Search"
+            />
+            <button className="pl-2">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
 
         {/* Sign-in and cart */}
         <div className="flex gap-10">

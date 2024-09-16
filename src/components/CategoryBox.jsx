@@ -6,7 +6,7 @@ const CategoryBox = ({ showBox, dropdown }) => {
     <div
       className={`${
         showBox ? "block" : "hidden"
-      } categBox shadow-md bg-white w-80 max-h-80 h-auto overflow-y-auto p-4 absolute left-0 z-10 rounded-b-xl`}
+      } categBox shadow-md bg-white w-80 max-h-80 h-auto overflow-y-auto p-4 absolute left-0 z-0 rounded-b-xl`}
     >
       <nav className="font-normal text-black">
         <ul>

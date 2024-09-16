@@ -2,7 +2,7 @@ import React from "react";
 
 const SecondaryNav = () => {
   return (
-    <div className="bg-red text-white flex justify-between px-8 py-3 text-sm z-20">
+    <div className="bg-red text-white flex justify-between px-8 py-3 text-sm z-40 relative">
       <div className="flex gap-8">
         <button className="hover:bg-dark_red py-1 px-3 rounded-3xl">
           <i className="fa-solid fa-location-dot mr-2"></i>Ship to
