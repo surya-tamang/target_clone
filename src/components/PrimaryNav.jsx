@@ -41,15 +41,23 @@ const PrimaryNav = () => {
     }
   }, [activeIndex]);
 
+  const [visibilityNav, setVisibiltyNav] = useState(false);
+
+  const handleOpenNav = () => {
+    setVisibiltyNav(true);
+  };
+  const handleCloseNav = () => {
+    setVisibiltyNav(false);
+  };
+
   return (
     <div className="gap-8 px-8 sticky top-0 text-black shadow-md z-30 w-full">
-      <MobMenu />
+      <MobMenu isVisible={visibilityNav} handleClick={handleCloseNav} />
       <div className="flex w-full items-center justify-between py-2">
         {/* menu bar */}
-        <div className="flex">
+        <button onClick={handleOpenNav}>
           <i className="fa-solid fa-bars text-black md:hidden text-2xl"></i>
-          <i className="fa-solid fa-x text-black md:hidden hidden"></i>
-        </div>
+        </button>
 
         {/* logo */}
         <div className="cursor-pointer">
