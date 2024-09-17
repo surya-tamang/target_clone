@@ -5,7 +5,7 @@ const BlackScreen = ({ showBox }) => {
     <div
       className={`${
         showBox ? "md:block" : "hidden"
-      } blackscreen w-full h-screen absolute left-0 top-16 z-0`}
+      } blackscreen w-full h-screen absolute left-0 md:top-20 z-0`}
     ></div>
   );
 };

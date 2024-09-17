@@ -5,7 +5,7 @@ const MobMenu = ({ isVisible, handleClick }) => {
     <div
       className={`absolute ${
         isVisible ? "block" : "hidden"
-      } md:hidden w-96 min-h-screen -top-12 bg-white left-0 z-50 capitalize`}
+      } md:hidden sm:w-96 w-full min-h-screen -top-12 bg-white left-0 z-50 capitalize`}
     >
       <div className="text-black bg-white text-2xl w-full sticky top-0 z-20 flex justify-between p-4 border-b-2">
         <h1 className="font-bold">Menu</h1>

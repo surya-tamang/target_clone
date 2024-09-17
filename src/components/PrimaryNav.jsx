@@ -51,9 +51,9 @@ const PrimaryNav = () => {
   };
 
   return (
-    <div className="gap-8 px-8 sticky top-0 text-black shadow-md z-30 w-full">
+    <div className="md:px-8 px-0 sticky top-0 text-black shadow-md w-full md:h-20 h-32 flex flex-col">
       <MobMenu isVisible={visibilityNav} handleClick={handleCloseNav} />
-      <div className="flex w-full items-center justify-between py-2">
+      <div className="flex w-full md:px-0 px-6 items-center justify-between py-2">
         {/* menu bar */}
         <button onClick={handleOpenNav}>
           <i className="fa-solid fa-bars text-black md:hidden text-2xl"></i>
@@ -68,7 +68,7 @@ const PrimaryNav = () => {
 
         {/* nav */}
         <nav
-          className="flex justify-around gap-3 items-center"
+          className="flex justify-around items-center"
           aria-label="primary navigation"
         >
           <ul className="md:flex hidden font-medium">
@@ -95,7 +95,7 @@ const PrimaryNav = () => {
           </ul>
 
           {/* Search bar */}
-          <div className="bg-white py-3 px-3 z-50 md:block hidden">
+          <div className="bg-white py-3 px-4 z-50 md:block hidden">
             <form className="w-96 p-3 rounded-3xl bg-dark_white flex items-center">
               <input
                 type="search"
@@ -121,6 +121,20 @@ const PrimaryNav = () => {
             </button>
           </div>
         </nav>
+      </div>
+      <div className="py-3 px-4 w-full md:hidden block">
+        <form className="w-full p-3 rounded-3xl bg-dark_white flex items-center">
+          <input
+            type="search"
+            name="search"
+            className="w-11/12 outline-none bg-dark_white"
+            placeholder="What can we help you find?"
+            aria-label="Search"
+          />
+          <button className="pl-2">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
       </div>
       <BlackScreen showBox={activeIndex !== null} />
     </div>
