@@ -3,7 +3,7 @@ import Product from "./Product";
 
 const Hero = () => {
   return (
-    <section className="flex justify-center items-center pb-14">
+    <section className="flex justify-center items-center pb-14 z-0">
       <div className="w-10/12 flex relative items-end">
         <img
           src="a-cocacola--lays-and-tide-detergent-in-a-red-backet-in-a-red-background-.jpeg"

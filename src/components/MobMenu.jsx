@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
+import gsap from "gsap";
 const MobMenu = ({ isVisible, handleClick }) => {
+  const box = useRef();
+  useEffect(() => {
+    if (isVisible) {
+      gsap.fromTo(
+        box.current,
+        { x: "-100%" }, //from
+        { x: "0%", duration: 0.5, ease: "power2.out" } // to
+      );
+    } else {
+      gsap.to(box.current, {
+        x: "-100%",
+        duration: 0.5,
+        ease: "power2.in",
+      });
+    }
+  }, [isVisible]);
   return (
     <div
+      ref={box}
       className={`absolute ${
         isVisible ? "block" : "hidden"
-      } md:hidden sm:w-96 w-full min-h-screen -top-12 bg-white left-0 z-50 capitalize`}
+      } md:hidden sm:w-96 w-full h-screen overflow-y-auto -top-12 bg-white left-0 z-50 capitalize`}
     >
       <div className="text-black bg-white text-2xl w-full sticky top-0 z-20 flex justify-between p-4 border-b-2">
         <h1 className="font-bold">Menu</h1>

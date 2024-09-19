@@ -3,6 +3,7 @@ import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
 import MobMenu from "./MobMenu";
+import SignInBox from "./SignInBox";
 
 const PrimaryNav = () => {
   const primaryNav = [
@@ -33,29 +34,39 @@ const PrimaryNav = () => {
     }
   };
 
+  const [visibilityNav, setVisibiltyNav] = useState(false);
+
+  const handleNavBox = () => {
+    setVisibiltyNav(!visibilityNav);
+  };
+
+  const [visibleSignin, setVisibleSignin] = useState(false);
+  const handleSignInBox = () => {
+    setVisibleSignin(!visibleSignin);
+  };
+
   useEffect(() => {
-    if (activeIndex !== null) {
+    if (
+      activeIndex !== null ||
+      visibleSignin === true ||
+      visibilityNav === true
+    ) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
-  }, [activeIndex]);
-
-  const [visibilityNav, setVisibiltyNav] = useState(false);
-
-  const handleOpenNav = () => {
-    setVisibiltyNav(true);
-  };
-  const handleCloseNav = () => {
-    setVisibiltyNav(false);
-  };
+  }, [activeIndex, visibilityNav, visibleSignin]);
 
   return (
-    <div className="md:px-8 px-0 sticky top-0 text-black shadow-md w-full md:h-20 h-32 flex flex-col">
-      <MobMenu isVisible={visibilityNav} handleClick={handleCloseNav} />
+    <header className="md:px-8 px-0 sticky top-0 text-black shadow-md w-full md:h-20 h-32 flex flex-col z-20 bg-white">
+      <MobMenu isVisible={visibilityNav} handleClick={handleNavBox} />
+      <SignInBox
+        isVisibleSignin={visibleSignin}
+        handleSigninClick={handleSignInBox}
+      />
       <div className="flex w-full md:px-0 px-6 items-center justify-between py-2">
         {/* menu bar */}
-        <button onClick={handleOpenNav}>
+        <button onClick={handleNavBox}>
           <i className="fa-solid fa-bars text-black md:hidden text-2xl"></i>
         </button>
 
@@ -95,7 +106,7 @@ const PrimaryNav = () => {
           </ul>
 
           {/* Search bar */}
-          <div className="bg-white py-3 px-4 z-50 md:block hidden">
+          <div className="bg-white py-3 px-4 z-40 md:block hidden">
             <form className="w-96 p-3 rounded-3xl bg-dark_white flex items-center">
               <input
                 type="search"
@@ -112,7 +123,10 @@ const PrimaryNav = () => {
 
           {/* Sign-in and cart */}
           <div className="flex md:gap-10">
-            <button className="font-light hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2">
+            <button
+              className="relative font-light hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2"
+              onClick={handleSignInBox}
+            >
               <i className="fa-solid fa-user md:mr-3"></i>
               <span className="md:inline hidden">Sign in</span>
             </button>
@@ -137,7 +151,7 @@ const PrimaryNav = () => {
         </form>
       </div>
       <BlackScreen showBox={activeIndex !== null} />
-    </div>
+    </header>
   );
 };
 

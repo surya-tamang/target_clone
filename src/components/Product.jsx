@@ -5,7 +5,7 @@ const Product = () => {
     <>
       <a
         href="#"
-        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md"
+        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
           src="src/assets/bounty.jpg"
@@ -20,7 +20,7 @@ const Product = () => {
       </a>
       <a
         href="#"
-        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md"
+        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
           src="src/assets/donna.png"
@@ -35,7 +35,7 @@ const Product = () => {
       </a>
       <a
         href="#"
-        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md"
+        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
           src="src/assets/butrish.webp"
@@ -50,7 +50,7 @@ const Product = () => {
       </a>
       <a
         href="#"
-        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md"
+        className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
           src="src/assets/drink.webp"

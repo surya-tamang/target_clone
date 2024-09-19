@@ -8,7 +8,7 @@ const App = () => {
     <>
       <SecondaryNav />
       <PrimaryNav />
-      {/* <Hero /> */}
+      <Hero />
     </>
   );
 };
