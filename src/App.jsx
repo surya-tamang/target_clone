@@ -1,14 +1,14 @@
 import React from "react";
-import Hero from "./components/Hero";
 import PrimaryNav from "./components/PrimaryNav";
 import SecondaryNav from "./components/SecondaryNav";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <>
       <SecondaryNav />
       <PrimaryNav />
-      <Hero />
+      <Home />
     </>
   );
 };
