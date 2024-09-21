@@ -26,3 +26,7 @@ body.no-scroll {
     background-color: #7876764f;
     /* top: 5rem; */
 }
+
+.lowerPrice {
+    height: 26rem;
+}

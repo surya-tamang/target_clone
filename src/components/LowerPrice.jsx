@@ -101,13 +101,13 @@ const LowerPrice = () => {
     },
   ];
   return (
-    <div className="bg-cream text-black h-96 px-5 capitalize">
+    <div className="lowerPrice bg-cream text-black px-5 capitalize ">
       <Heading text="new lower prices on must-haves" />
-      <div className="w-full overflow-x-auto pt-8 flex justify-center items-center gap-4">
+      <div className="w-full overflow-x-auto pt-8 flex">
         {products.map((item, index) => {
           const { image, price, old_price, title } = item;
           return (
-            <div className="min-w-40 h-64 bg-white rounded-md flex flex-shrink-0 flex-col py-2 px-4">
+            <div className="min-w-40 w-40 h-72 bg-white rounded-md flex flex-shrink-0 flex-col py-2 px-4 ml-4">
               <div className="h-32 w-full">
                 <img
                   src={image}
