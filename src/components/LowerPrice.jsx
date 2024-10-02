@@ -107,7 +107,10 @@ const LowerPrice = () => {
         {products.map((item, index) => {
           const { image, price, old_price, title } = item;
           return (
-            <div className="min-w-40 w-40 h-72 bg-white rounded-md flex flex-shrink-0 flex-col py-2 px-4 ml-4">
+            <div
+              key={index}
+              className="min-w-40 w-40 h-72 bg-white rounded-md flex flex-shrink-0 flex-col py-2 px-4 ml-4"
+            >
               <div className="h-32 w-full">
                 <img
                   src={image}

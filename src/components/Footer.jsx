@@ -114,35 +114,35 @@ const Footer = () => {
             href="https://www.youtube.com/watch?v=SbYXkOAoZpI"
             className="bg-gray-600 h-6 w-6 hover:bg-slate-500 text-xs text-white rounded-full flex items-center justify-center"
           >
-            <i class="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-facebook-f"></i>
           </a>
           <a
             href="https://www.youtube.com/watch?v=SbYXkOAoZpI"
             className="bg-gray-600 h-6 w-6 hover:bg-slate-500 text-xs text-white rounded-full flex items-center justify-center"
           >
-            <i class="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram"></i>
           </a>
           <a
             href="https://www.youtube.com/watch?v=SbYXkOAoZpI"
             className="bg-gray-600 h-6 w-6 hover:bg-slate-500 text-xs text-white rounded-full flex items-center justify-center"
           >
-            <i class="fa-brands fa-x-twitter"></i>
+            <i className="fa-brands fa-x-twitter"></i>
           </a>
           <a
             href="https://www.youtube.com/watch?v=SbYXkOAoZpI"
             className="bg-gray-600 h-6 w-6 hover:bg-slate-500 text-xs text-white rounded-full flex items-center justify-center"
           >
-            <i class="fa-brands fa-pinterest-p"></i>
+            <i className="fa-brands fa-pinterest-p"></i>
           </a>
           <a
             href="https://www.youtube.com/watch?v=SbYXkOAoZpI"
             className="bg-gray-600 h-6 w-6 hover:bg-slate-500 text-xs text-white rounded-full flex items-center justify-center"
           >
-            <i class="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-youtube"></i>
           </a>
         </div>
         <div className="text-xs flex gap-6 text-white md:flex-row flex-col">
-          <ul className="capitalize flex gap-4 flex-wrap">
+          <ul className="capitalize justify-center flex gap-4 flex-wrap">
             <li className="cursor-pointer hover:text-slate-300">terms</li>
             <li className="cursor-pointer hover:text-slate-300">
               CA supply chain
@@ -161,7 +161,7 @@ const Footer = () => {
               health privacy policy
             </li>
           </ul>
-          <p>TM & &#169; 2024 Target Brands, Inc.</p>
+          <p className="text-center">TM & &#169; 2024 Target Brands, Inc.</p>
         </div>
       </div>
     </footer>

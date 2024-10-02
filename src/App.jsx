@@ -3,15 +3,19 @@ import PrimaryNav from "./components/PrimaryNav";
 import SecondaryNav from "./components/SecondaryNav";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import { Router, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-      <SecondaryNav />
-      <PrimaryNav />
-      <Home />
-      <Footer />
+      <Router>
+        <SecondaryNav />
+        <PrimaryNav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 };

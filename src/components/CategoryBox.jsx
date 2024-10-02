@@ -15,7 +15,7 @@ const CategoryBox = ({ showBox, dropdown }) => {
             return (
               <li
                 key={index}
-                className="py-3 border-b-2 border-grey hover:underline"
+                className="py-3 border-b-2 border-grey hover:underline cursor-pointer"
               >
                 {name}
               </li>

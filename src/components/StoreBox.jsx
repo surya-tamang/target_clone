@@ -71,7 +71,7 @@ const StoreBox = ({ handleStoreClick, isVisibleStore }) => {
           </button>
         </div>
         <button className="py-3 mt-2 px-7 text-base">
-          <i class="fa-solid fa-location-dot text-red"></i>
+          <i className="fa-solid fa-location-dot text-red"></i>
           <span className="underline text-black capitalize ml-4">
             use my current location
           </span>
