@@ -1,10 +1,11 @@
 import React from "react";
 import Product from "../components/Product";
 import LowerPrice from "../components/LowerPrice";
+import Menus from "../components/Menus";
 
 const Home = () => {
   return (
-    <main className="flex justify-center items-center w-full flex-col z-0">
+    <main className="flex justify-center items-center w-full flex-col z-0 bg-white">
       <section className="flex w-full justify-center items-center">
         <div className="w-10/12 flex relative items-end">
           <img
@@ -23,6 +24,7 @@ const Home = () => {
       <section className="w-10/12 my-10">
         <LowerPrice />
       </section>
+      <Menus />
     </main>
   );
 };

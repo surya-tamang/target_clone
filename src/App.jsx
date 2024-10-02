@@ -4,6 +4,7 @@ import SecondaryNav from "./components/SecondaryNav";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Signin from "./pages/signin";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <PrimaryNav />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
         <Footer />
       </Router>

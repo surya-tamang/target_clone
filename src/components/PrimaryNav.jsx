@@ -3,7 +3,7 @@ import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
 import MobMenu from "./MobMenu";
-import SignInBox from "./SignInBox";
+import UserSetting from "./UserSetting";
 
 const PrimaryNav = () => {
   const primaryNav = [
@@ -45,6 +45,9 @@ const PrimaryNav = () => {
     setVisibleSignin(!visibleSignin);
   };
 
+  const handlebtnClick = () => {
+    setVisibleSignin(false);
+  };
   useEffect(() => {
     if (
       activeIndex !== null ||
@@ -60,9 +63,10 @@ const PrimaryNav = () => {
   return (
     <header className="md:px-8 px-0 sticky top-0 text-black shadow-md w-full md:h-20 h-32 flex flex-col z-20 bg-white">
       <MobMenu isVisible={visibilityNav} handleClick={handleNavBox} />
-      <SignInBox
+      <UserSetting
         isVisibleSignin={visibleSignin}
         handleSigninClick={handleSignInBox}
+        handlebtnClick={handlebtnClick}
       />
       <div className="flex w-full md:px-0 px-6 items-center justify-between py-2">
         {/* menu bar */}

@@ -1,7 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
+import { NavLink } from "react-router-dom";
 
-const SignInBox = ({ isVisibleSignin, handleSigninClick }) => {
+const UserSetting = ({
+  isVisibleSignin,
+  handleSigninClick,
+  handlebtnClick,
+}) => {
   const box = useRef();
   useEffect(() => {
     if (isVisibleSignin) {
@@ -19,8 +24,8 @@ const SignInBox = ({ isVisibleSignin, handleSigninClick }) => {
     }
   }, [isVisibleSignin]);
   const list = [
-    { name: "sign in", path: "/" },
-    { name: "create an account", path: "/" },
+    { name: "sign in", path: "/signin" },
+    { name: "create an account", path: "/signup" },
     { name: "orders", path: "/" },
     { name: "gift cards", path: "/" },
     { name: "registry", path: "/" },
@@ -45,12 +50,14 @@ const SignInBox = ({ isVisibleSignin, handleSigninClick }) => {
           {list.map((item, index) => {
             const { name, path } = item;
             return (
-              <li
+              <NavLink
                 key={index}
+                onClick={handlebtnClick}
+                to={path}
                 className="border-b-2 py-3 hover:underline cursor-pointer"
               >
                 {name}
-              </li>
+              </NavLink>
             );
           })}
         </ul>
@@ -59,4 +66,4 @@ const SignInBox = ({ isVisibleSignin, handleSigninClick }) => {
   );
 };
 
-export default SignInBox;
+export default UserSetting;
