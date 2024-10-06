@@ -24,6 +24,37 @@ const Home = () => {
       <section className="w-10/12 my-10">
         <LowerPrice />
       </section>
+      <section className="w-10/12 my-10 relative overflow-hidden rounded-xl">
+        <img src="app.webp" alt="app" className="w-full h-full" />
+        <article className="text-white absolute left-0 w-5/12 h-full top-0 flex flex-col items-start justify-center px-16">
+          <h1 className="font-bold text-4xl mb-2">
+            The easiest way to shop and save
+          </h1>
+          <h2 className="font-normal text-2xl">
+            Download the Target app & get more Target in one place.
+          </h2>
+        </article>
+      </section>
+
+      <section className="w-10/12 flex justify-center items-center gap-5 my-10 flex-wrap">
+        <h1 className="font-bold text-xl">
+          Get top deals, latest trends, and more.
+        </h1>
+        <form action="" className="flex gap-3">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            className="border py-2 px-3"
+          />
+          <button className="bg-red hover:bg-dark_red py-2 px-5 rounded-3xl text-white font-bold">
+            Sign up
+          </button>
+        </form>
+        <a href="#" className="text-grey underline capitalize">
+          privacy policy
+        </a>
+      </section>
       <Menus />
     </main>
   );
