@@ -8,7 +8,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="src/assets/bounty.jpg"
+          src="/assets/bounty.jpg"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -23,7 +23,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="src/assets/donna.png"
+          src="/assets/donna.png"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -38,7 +38,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="src/assets/butrish.webp"
+          src="/assets/butrish.webp"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -53,7 +53,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="src/assets/drink.webp"
+          src="/assets/drink.webp"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />

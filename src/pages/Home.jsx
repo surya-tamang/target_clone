@@ -2,6 +2,7 @@ import React from "react";
 import Product from "../components/Product";
 import LowerPrice from "../components/LowerPrice";
 import Menus from "../components/Menus";
+import PopularOnSocial from "../components/PopularOnSocial";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <section className="flex w-full justify-center items-center">
         <div className="w-10/12 flex relative items-end">
           <img
-            src="a-cocacola--lays-and-tide-detergent-in-a-red-backet-in-a-red-background-.jpeg"
+            src="/assets/a-cocacola--lays-and-tide-detergent-in-a-red-backet-in-a-red-background-.jpeg"
             alt="cocal"
             className="w-full z-0"
           />
@@ -24,8 +25,11 @@ const Home = () => {
       <section className="w-10/12 my-10">
         <LowerPrice />
       </section>
+      <section className="w-10/12 my-10 bg-pink">
+        <PopularOnSocial />
+      </section>
       <section className="w-10/12 my-10 relative overflow-hidden rounded-xl">
-        <img src="app.webp" alt="app" className="w-full h-full" />
+        <img src="/assets/app.webp" alt="app" className="w-full h-full" />
         <article className="text-white absolute left-0 w-5/12 h-full top-0 flex flex-col items-start justify-center px-16">
           <h1 className="font-bold text-4xl mb-2">
             The easiest way to shop and save
