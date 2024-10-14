@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signin from "./pages/signin";
-import SignUp from "./components/SignUp";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (

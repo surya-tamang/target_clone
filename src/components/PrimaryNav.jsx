@@ -4,6 +4,7 @@ import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
 import MobMenu from "./MobMenu";
 import UserSetting from "./UserSetting";
+import CartBox from "./CartBox";
 
 const PrimaryNav = () => {
   const primaryNav = [
@@ -35,24 +36,18 @@ const PrimaryNav = () => {
   };
 
   const [visibilityNav, setVisibiltyNav] = useState(false);
-
+  const [visibleSignin, setVisibleSignin] = useState(false);
+  const [visibleCartBox, setVisibleCartBox] = useState(false);
   const handleNavBox = () => {
     setVisibiltyNav(!visibilityNav);
   };
 
-  const [visibleSignin, setVisibleSignin] = useState(false);
-  const handleSignInBox = () => {
-    setVisibleSignin(!visibleSignin);
-  };
-
-  const handlebtnClick = () => {
-    setVisibleSignin(false);
-  };
   useEffect(() => {
     if (
       activeIndex !== null ||
       visibleSignin === true ||
-      visibilityNav === true
+      visibilityNav === true ||
+      visibleCartBox === true
     ) {
       document.body.classList.add("no-scroll");
     } else {
@@ -65,8 +60,13 @@ const PrimaryNav = () => {
       <MobMenu isVisible={visibilityNav} handleClick={handleNavBox} />
       <UserSetting
         isVisibleSignin={visibleSignin}
-        handleSigninClick={handleSignInBox}
-        handlebtnClick={handlebtnClick}
+        handleSigninClick={() => setVisibleSignin(!visibleSignin)}
+        handlebtnClick={() => setVisibleSignin(false)}
+      />
+
+      <CartBox
+        isVisibleCart={visibleCartBox}
+        handleClick={() => setVisibleCartBox(false)}
       />
       <div className="flex w-full md:px-0 px-6 items-center justify-between py-2">
         {/* menu bar */}
@@ -129,12 +129,15 @@ const PrimaryNav = () => {
           <div className="flex md:gap-10">
             <button
               className="relative font-light hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2"
-              onClick={handleSignInBox}
+              onClick={() => setVisibleSignin(!visibleSignin)}
             >
               <i className="fa-solid fa-user md:mr-3"></i>
               <span className="md:inline hidden">Sign in</span>
             </button>
-            <button className="hover:bg-dark_white rounded-full px-3 cursor-pointer py-2">
+            <button
+              onClick={() => setVisibleCartBox(!visibleCartBox)}
+              className="hover:bg-dark_white rounded-full px-3 cursor-pointer py-2"
+            >
               <i className="fa-solid fa-cart-shopping"></i>
             </button>
           </div>

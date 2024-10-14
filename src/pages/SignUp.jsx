@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
