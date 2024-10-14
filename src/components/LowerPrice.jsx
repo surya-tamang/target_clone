@@ -1,7 +1,10 @@
 import React from "react";
 import Heading from "./Heading";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/slice/cartSlice";
 
 const LowerPrice = () => {
+  const dispatch = useDispatch();
   const products = [
     {
       image: "/assets/shake.jpg",
@@ -127,7 +130,10 @@ const LowerPrice = () => {
                 </div>
                 <p className="font-semibold">{title}</p>
               </div>
-              <button className="bg-red rounded-3xl py-2 text-white capitalize font-semibold text-xs">
+              <button
+                onClick={() => dispatch(addToCart(item))}
+                className="bg-red rounded-3xl py-2 text-white capitalize font-semibold text-xs"
+              >
                 add to cart
               </button>
             </div>

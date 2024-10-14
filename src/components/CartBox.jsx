@@ -1,7 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../redux/slice/cartSlice";
 
 const CartBox = ({ isVisibleCart, handleClick }) => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart);
+  console.log(cartItems);
   const box = useRef();
   useEffect(() => {
     if (isVisibleCart) {
@@ -32,6 +37,23 @@ const CartBox = ({ isVisibleCart, handleClick }) => {
         >
           <i className="fa-solid fa-x"></i>
         </button>
+      </div>
+      <div className="flex flex-col py-4 px-2">
+        {cartItems.map((item, index) => {
+          const { title, price, image } = item;
+          return (
+            <li key={index} className="flex justify-center">
+              <img src={image} alt={title} className="w-16 h-16 object-cover" />
+              <div>
+                <p>{title}</p>
+                <p>{price}</p>
+              </div>
+              <button onClick={() => dispatch(removeFromCart(index))}>
+                remove
+              </button>
+            </li>
+          );
+        })}
       </div>
     </div>
   );
