@@ -38,9 +38,9 @@ const App = () => {
           handleClick={() => setVisibleCartBox(false)}
         />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/target_clone" element={<Home />} />
+          <Route path="/target_clone/signin" element={<Signin />} />
+          <Route path="/target_clone/signup" element={<SignUp />} />
         </Routes>
         <Footer />
       </Router>

@@ -25,7 +25,7 @@ const Signin = () => {
   return (
     <section className="w-full min-h-screen flex items-center flex-col absolute top-0 z-50 bg-white">
       <div className="min-h-screen flex justify-center items-center flex-col md:w-96 w-52 gap-7 py-10">
-        <NavLink to="/">
+        <NavLink to="/target_clone/">
           <img src="target.png" alt="logo" className="w-16 h-16" />
         </NavLink>
         <form
@@ -93,7 +93,7 @@ const Signin = () => {
           </span>
         </div>
         <NavLink
-          to="/signup"
+          to="/target_clone/signup"
           className="bg-white border-2 border-grey hover:bg-dark_white w-full py-3 rounded-3xl font-normal text-xl capitalize text-center"
         >
           create your target account

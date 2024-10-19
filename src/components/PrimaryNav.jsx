@@ -3,6 +3,7 @@ import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
 import MobMenu from "./MobMenu";
+import { NavLink } from "react-router-dom";
 
 const PrimaryNav = ({
   visibleSignin,
@@ -10,7 +11,7 @@ const PrimaryNav = ({
   visibleCartBox,
   handleClick,
   handleCart,
-  handleSigninClick
+  handleSigninClick,
 }) => {
   const primaryNav = [
     { name: "categories", path: "/" },
@@ -65,9 +66,9 @@ const PrimaryNav = ({
 
         {/* logo */}
         <div className="cursor-pointer">
-          <a href="#" aria-label="Home">
+          <NavLink to="/target_clone/" aria-label="Home">
             <img src="target.png" alt="" className="w-11 h-10" />
-          </a>
+          </NavLink>
         </div>
 
         {/* nav */}

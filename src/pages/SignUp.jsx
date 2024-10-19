@@ -45,7 +45,7 @@ const SignUp = () => {
   return (
     <section className="w-full min-h-screen flex items-center flex-col absolute top-0 z-50 bg-white">
       <div className="min-h-screen flex justify-center items-center flex-col md:w-96 w-52 gap-7 py-10">
-        <NavLink to="/">
+        <NavLink to="/target_clone/">
           <img src="target.png" alt="logo" className="w-16 h-16" />
         </NavLink>
         <form
@@ -105,7 +105,7 @@ const SignUp = () => {
             Create an account
           </button>
           <NavLink
-            to="/signin"
+            to="/target_clone/signin"
             className="underline text-grey cursor-pointer capitalize"
           >
             or signin

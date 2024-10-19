@@ -1,6 +1,6 @@
 import React from "react";
 
-const Product = () => {
+const HighlightProduct = () => {
   return (
     <>
       <a
@@ -8,7 +8,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="/assets/bounty.jpg"
+          src="bounty.jpg"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -23,7 +23,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="/assets/donna.png"
+          src="donna.png"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -38,7 +38,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="/assets/butrish.webp"
+          src="butrish.webp"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -53,7 +53,7 @@ const Product = () => {
         className="group h-92 bg-dark_red w-72 flex flex-col rounded-md z-0"
       >
         <img
-          src="/assets/drink.webp"
+          src="drink.webp"
           alt=""
           className="aspect-square w-full h-52 rounded object-cover"
         />
@@ -67,4 +67,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default HighlightProduct;

@@ -24,8 +24,8 @@ const UserSetting = ({
     }
   }, [isVisibleSignin]);
   const list = [
-    { name: "sign in", path: "/signin" },
-    { name: "create an account", path: "/signup" },
+    { name: "sign in", path: "/target_clone/signin" },
+    { name: "create an account", path: "/target_clone/signup" },
     { name: "orders", path: "/" },
     { name: "gift cards", path: "/" },
     { name: "registry", path: "/" },

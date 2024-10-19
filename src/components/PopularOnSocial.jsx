@@ -4,7 +4,32 @@ const PopularOnSocial = () => {
   const products = [
     {
       name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
+      image: "kid.jpg",
+      price: 250,
+    },
+    {
+      name: "Small kid clothes for summer + winter",
+      image: "kid.jpg",
+      price: 250,
+    },
+    {
+      name: "Small kid clothes for summer + winter",
+      image: "kid.jpg",
+      price: 250,
+    },
+    {
+      name: "Small kid clothes for summer + winter",
+      image: "kid.jpg",
+      price: 250,
+    },
+    {
+      name: "Small kid clothes for summer + winter",
+      image: "kid.jpg",
+      price: 250,
+    },
+    {
+      name: "Small kid clothes for summer + winter",
+      image: "kid.jpg",
       price: 250,
     },
     {
@@ -14,42 +39,17 @@ const PopularOnSocial = () => {
     },
     {
       name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
+      image: "kid.jpg",
       price: 250,
     },
     {
       name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
+      image: "kid.jpg",
       price: 250,
     },
     {
       name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
-      price: 250,
-    },
-    {
-      name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
-      price: 250,
-    },
-    {
-      name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
-      price: 250,
-    },
-    {
-      name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
-      price: 250,
-    },
-    {
-      name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
-      price: 250,
-    },
-    {
-      name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
+      image: "kid.jpg",
       price: 250,
     },
   ];
@@ -57,7 +57,7 @@ const PopularOnSocial = () => {
     <div className="w-full flex overflow-x-auto overflow-y-hidden p-4 md:h-96 h-72 gap-3">
       <div className="md:w-72 w-52 h-full flex-shrink-0 overflow-hidden relative">
         <img
-          src="/assets/pinkbasket.jpeg"
+          src="pinkbasket.jpeg"
           alt="basket"
           className="w-full object-cover"
         />
