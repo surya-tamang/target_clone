@@ -4,7 +4,7 @@ import SecondaryNav from "./components/SecondaryNav";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signin from "./pages/signin";
+import Signin from "./pages/Signin";
 import SignUp from "./pages/SignUp";
 import UserSetting from "./components/UserSetting";
 import CartBox from "./components/CartBox";
