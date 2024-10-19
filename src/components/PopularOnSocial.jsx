@@ -34,7 +34,7 @@ const PopularOnSocial = () => {
     },
     {
       name: "Small kid clothes for summer + winter",
-      image: "/assets/kid.jpg",
+      image: "kid.jpg",
       price: 250,
     },
     {

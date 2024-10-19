@@ -76,11 +76,11 @@ const CartBox = ({ isVisibleCart, handleClick }) => {
           {total.toFixed(2)}
         </p>
       </div>
-      <button className="fixed bottom-0 w-full px-10 py-3">
+      <div className="fixed bottom-0 w-full px-10 py-3">
         <button className="bg-red py-3 text-white font-bold w-full rounded-3xl hover:bg-dark_red">
           Check out
         </button>
-      </button>
+      </div>
     </div>
   );
 };

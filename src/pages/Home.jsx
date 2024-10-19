@@ -3,11 +3,29 @@ import HighlightProduct from "../components/HighlightProduct";
 import LowerPrice from "../components/LowerPrice";
 import Menus from "../components/Menus";
 import PopularOnSocial from "../components/PopularOnSocial";
+import Heading from "../components/Heading";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
+  const categories = [
+    { category: "halloween", img: "halloween.webp", path: "" },
+    { category: "christmas", img: "christmas.webp", path: "" },
+    { category: "women's", img: "womens.webp", path: "" },
+    { category: "men's", img: "mens.webp", path: "" },
+    { category: "kids", img: "kids.webp", path: "" },
+    { category: "baby", img: "baby'.webp", path: "" },
+    { category: "home", img: "home.webp", path: "" },
+    { category: "kitchen & dining", img: "kitchen.webp", path: "" },
+    { category: "toys", img: "toys.webp", path: "" },
+    { category: "video games", img: "games.webp", path: "" },
+    { category: "households", img: "household.webp", path: "" },
+    { category: "pets", img: "pet.webp", path: "" },
+    { category: "clearance", img: "clearance.webp", path: "" },
+    { category: "sports & outdoors", img: "outdoor.webp", path: "" },
+  ];
   return (
     <main className="flex justify-center items-center w-full flex-col z-0 bg-white">
-      <section className="flex w-full justify-center items-center">
+      <section className="md:flex hidden w-full justify-center items-center ">
         <div className="w-10/12 flex relative items-end">
           <img
             src="a-cocacola--lays-and-tide-detergent-in-a-red-backet-in-a-red-background-.jpeg"
@@ -28,13 +46,13 @@ const Home = () => {
       <section className="w-10/12 my-10 bg-pink">
         <PopularOnSocial />
       </section>
-      <section className="w-10/12 my-10 relative overflow-hidden rounded-xl">
+      <section className="w-10/12 my-10 h-24 md:h-auto relative overflow-hidden rounded-xl">
         <img src="app.webp" alt="app" className="w-full h-full" />
-        <article className="text-white absolute left-0 w-5/12 h-full top-0 flex flex-col items-start justify-center px-16">
-          <h1 className="font-bold text-4xl mb-2">
+        <article className="text-white absolute left-2 md:left-0 w-5/12 h-full top-0 flex flex-col items-start justify-center md:px-16 px-0">
+          <h1 className="font-bold text-xs md:text-4xl mb-2">
             The easiest way to shop and save
           </h1>
-          <h2 className="font-normal text-2xl">
+          <h2 className="font-normal md:text-3xl text-xs">
             Download the Target app & get more Target in one place.
           </h2>
         </article>
@@ -58,6 +76,24 @@ const Home = () => {
         <a href="#" className="text-grey underline capitalize">
           privacy policy
         </a>
+      </section>
+      <section className="flex justify-center w-10/12 items-center flex-col gap-10 my-10">
+        <Heading text="featured categories" />
+        <div className="flex flex-wrap w-full justify-center gap-10">
+          {categories.map((item, index) => {
+            const { category, img, path } = item;
+            return (
+              <NavLink key={index} to={path}>
+                <img
+                  src={img}
+                  alt={category}
+                  className="rounded-full h-36 w-36"
+                />
+                <p className="text-center mt-4 capitalize">{category}</p>
+              </NavLink>
+            );
+          })}
+        </div>
       </section>
       <Menus />
     </main>
