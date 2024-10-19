@@ -3,10 +3,15 @@ import CategoryBox from "./CategoryBox";
 import { categories, deals, newFeature, pickUp } from "./dropdowns";
 import BlackScreen from "./BlackScreen";
 import MobMenu from "./MobMenu";
-import UserSetting from "./UserSetting";
-import CartBox from "./CartBox";
 
-const PrimaryNav = () => {
+const PrimaryNav = ({
+  visibleSignin,
+  visibilityNav,
+  visibleCartBox,
+  handleClick,
+  handleCart,
+  handleSigninClick
+}) => {
   const primaryNav = [
     { name: "categories", path: "/" },
     { name: "deals", path: "/" },
@@ -35,13 +40,6 @@ const PrimaryNav = () => {
     }
   };
 
-  const [visibilityNav, setVisibiltyNav] = useState(false);
-  const [visibleSignin, setVisibleSignin] = useState(false);
-  const [visibleCartBox, setVisibleCartBox] = useState(false);
-  const handleNavBox = () => {
-    setVisibiltyNav(!visibilityNav);
-  };
-
   useEffect(() => {
     if (
       activeIndex !== null ||
@@ -57,20 +55,11 @@ const PrimaryNav = () => {
 
   return (
     <header className="md:px-8 px-0 sticky top-0 text-black shadow-md w-full md:h-20 h-32 flex flex-col z-20 bg-white">
-      <MobMenu isVisible={visibilityNav} handleClick={handleNavBox} />
-      <UserSetting
-        isVisibleSignin={visibleSignin}
-        handleSigninClick={() => setVisibleSignin(!visibleSignin)}
-        handlebtnClick={() => setVisibleSignin(false)}
-      />
+      <MobMenu isVisible={visibilityNav} handleClick={handleClick} />
 
-      <CartBox
-        isVisibleCart={visibleCartBox}
-        handleClick={() => setVisibleCartBox(false)}
-      />
       <div className="flex w-full md:px-0 px-6 items-center justify-between py-2">
         {/* menu bar */}
-        <button onClick={handleNavBox}>
+        <button onClick={handleClick}>
           <i className="fa-solid fa-bars text-black md:hidden text-2xl"></i>
         </button>
 
@@ -129,13 +118,13 @@ const PrimaryNav = () => {
           <div className="flex md:gap-10">
             <button
               className="relative font-light hover:bg-dark_white rounded-3xl px-3 cursor-pointer py-2"
-              onClick={() => setVisibleSignin(!visibleSignin)}
+              onClick={handleSigninClick}
             >
               <i className="fa-solid fa-user md:mr-3"></i>
               <span className="md:inline hidden">Sign in</span>
             </button>
             <button
-              onClick={() => setVisibleCartBox(!visibleCartBox)}
+              onClick={handleCart}
               className="hover:bg-dark_white rounded-full px-3 cursor-pointer py-2"
             >
               <i className="fa-solid fa-cart-shopping"></i>

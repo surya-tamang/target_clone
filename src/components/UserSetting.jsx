@@ -33,8 +33,8 @@ const UserSetting = ({
   return (
     <div
       ref={box}
-      className={`absolute ${isVisibleSignin ? "block" : "hidden"}
-     sm:w-96 w-full h-screen -top-12 bg-white right-0 z-50 capitalize`}
+      className={`fixed ${isVisibleSignin ? "block" : "hidden"}
+     sm:w-96 w-full h-screen top-0 bg-white right-0 z-50 capitalize`}
     >
       <div className="text-black bg-white text-2xl w-full sticky top-0 z-20 flex justify-between p-4 border-b-2">
         <h1 className="font-bold">accounts</h1>
